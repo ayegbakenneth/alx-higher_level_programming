@@ -32,7 +32,7 @@ if __name__ == "__main__":
             else:
                 total += 1
 
-            ken = line.split()
+            line = line.split()
 
             try:
                 size += int(line[-1])
@@ -40,11 +40,11 @@ if __name__ == "__main__":
                 pass
 
             try:
-                if ken[-2] in valid_codes:
-                    if status_codes.get(ken[-2], -1) == -1:
-                        status_codes[ken[-2]] = 1
+                if line[-2] in valid_codes:
+                    if status_codes.get(line[-2], -1) == -1:
+                        status_codes[line[-2]] = 1
                     else:
-                        status_codes[ken[-2]] += 1
+                        status_codes[line[-2]] += 1
             except IndexError:
                 pass
 
